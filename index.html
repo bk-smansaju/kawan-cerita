@@ -189,7 +189,7 @@ main.w section.plain{padding-left:0}
 .fs{flex:1;border-radius:20px;padding:18px 20px}
 .fs .no{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sf);font-weight:700;color:var(--ac);margin-bottom:8px}
 .fs h3{margin:0 0 6px;font:600 16px var(--fb)}.fs p{margin:0;color:var(--mu);font-size:15px}
-.rf .fs{flex:0 1 230px}
+.rf .fs{flex:0 1 205px}
 .fork{position:relative;flex:1;display:flex;flex-direction:column;gap:10px;padding-left:34px;justify-content:center}
 .fork::before{content:"";position:absolute;left:10px;top:28px;bottom:28px;border-left:3px solid var(--ac);opacity:.35}
 .fk{position:relative;border-radius:16px;padding:13px 18px;color:var(--tx);font-size:15px}
@@ -216,14 +216,14 @@ main.w section.plain{padding-left:0}
 .cn{flex:1;max-width:270px;text-align:center}
 .cn p{color:var(--mu);font-size:15px;margin:0}
 .cr{width:min(150px,100%);aspect-ratio:1;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font:600 18px/1.2 var(--fd);padding:12px;color:var(--tx)}
-.cyc>.ar{margin-top:60px}
+.cyc>.ar{margin-top:70px;align-self:flex-start}
 .ret{display:block;width:72%;max-width:600px;margin:8px auto 0;color:var(--ac)}.rnote{display:none;text-align:center}
 @media (max-width:860px){.wrap{grid-template-columns:1fr}.nl{grid-template-columns:1fr}}
 @media (max-width:760px){
   .flow,.rf{flex-direction:column}.flow>.ar,.rf>.ar{transform:rotate(90deg);width:36px;height:24px;margin:-2px auto}
   .rf .fs{flex:1}.fork{padding-left:32px}
   .kv>div{grid-template-columns:1fr;gap:4px}
-  .cyc{flex-direction:column;align-items:center}.cyc>.ar{margin:6px 0;transform:rotate(90deg);width:36px;height:24px}
+  .cyc{flex-direction:column;align-items:center}.cyc>.ar{margin:6px 0;transform:rotate(90deg);width:36px;height:24px;align-self:center}
   .cn{max-width:340px}.ret{display:none}.rnote{display:block}
   .sp{max-width:94%}.cc{width:calc(50% - 8px);min-width:150px;padding:18px;font-size:14px}
 }
@@ -385,6 +385,12 @@ var KONTAK="Guru BK atau orang dewasa yang kamu percaya";
    Backend menerima POST JSON {system, messages:[{role,content}]} dan membalas {text}.
    JANGAN taruh API key di file ini; kunci harus tetap di server. */
 var PROXY_URL="";
+async function viaApi(messages){
+  var res=await fetch(CFG.API_URL,{method:"POST",body:JSON.stringify({type:"kcd",messages:messages})});
+  var j=await res.json();
+  if(!j||!j.ok||!j.text)throw {code:"error"};
+  return {text:j.text};
+}
 async function viaProxy(system,messages){
   var res=await fetch(PROXY_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({system:system,messages:messages})});
   if(!res.ok)throw {code:res.status===429?"rate_limited":"error"};
@@ -416,14 +422,14 @@ async function send(txt){
   var el=add("Mengetik…","b");thinkOn();
   try{
     var sample=(window.claude&&claude.use)?await claude.use("sample"):null;
-    if(!sample&&!PROXY_URL){el.textContent="Chatbot belum tersedia di tampilan ini. Silakan hubungi Guru BK atau konselor sebaya Kawan Cerita.";hist.pop();busy=false;thinkOff();return}
+    if(!sample&&!PROXY_URL&&!(typeof CFG!=="undefined"&&CFG.API_URL)){console.warn("KCD: isi CFG.API_URL (Apps Script) atau PROXY_URL");el.textContent="Maaf, KCD belum bisa dipakai sekarang. Kamu tetap bisa bercerita ke Kawan Cerita atau Guru BK.";hist.pop();busy=false;thinkOff();return}
     var recent=hist.slice(-8);
     var r;
     if(sample){
       var input=[{role:"user",content:SYS+"\n\nPercakapan sejauh ini ada di bawah. Balas pesan murid terakhir saja, tanpa label peran.\n\n"+recent.map(function(m){return (m.role==="user"?"Murid: ":"KCD: ")+m.content}).join("\n")}];
       r=await sample(input,{cache:false,modelTier:"quick",onText:function(x){el.textContent=x.text;log.scrollTop=log.scrollHeight}});
     }else{
-      r=await viaProxy(SYS,recent);
+      r=PROXY_URL?await viaProxy(SYS,recent):await viaApi(recent);
     }
     el.textContent=r.text;hist.push({role:"assistant",content:r.text});
   }catch(e){
