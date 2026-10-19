@@ -149,6 +149,84 @@ main.w section.plain{padding-left:0}
 .fm input[type=text],.fm textarea{width:100%;box-sizing:border-box;margin:4px 0 14px;padding:10px 12px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:14px}
 .fm textarea{resize:vertical}.fm .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 #dfform{max-width:640px}
+#latar .g{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+@media (min-width:1000px){#latar .g>.c:last-child{grid-column:span 2}}
+.b1{--bc:#6fb7c9}.b2{--bc:#e8a97e}.b3{--bc:#9c97e0}.b4{--bc:#7fc4a0}.b5{--bc:#e3c15e}
+#mm svg{display:block;width:100%;height:auto;overflow:visible}
+#mm a{text-decoration:none;cursor:pointer}
+.mml{stroke:var(--bc);fill:none;stroke-linecap:round;opacity:.7}
+.mmb rect{fill:var(--bc)}.mmb text{fill:#1f2a3d;font:700 15px var(--fb)}
+.mmn rect{stroke:var(--bc);stroke-width:1.6;transition:fill .2s}
+.b1 .mmn rect{fill:var(--t1)}.b2 .mmn rect{fill:var(--t2)}.b3 .mmn rect{fill:var(--t3)}.b4 .mmn rect{fill:var(--t4)}.b5 .mmn rect{fill:var(--t5)}
+.mmn text{fill:var(--tx);font:500 14px var(--fb)}
+.mmn:hover rect,.mmn:focus-visible rect{fill:var(--bc)!important}.mmn:hover text,.mmn:focus-visible text{fill:#1f2a3d}
+.mmc text{fill:var(--tx);font:600 19px var(--fd)}
+.mm-m .mm-c{display:flex;align-items:center;gap:12px;margin-bottom:14px;font:600 20px var(--fd)}
+.mm-m .logo.s{width:48px;height:48px;margin:0}
+.mm-m details{border-left:6px solid var(--bc);border-radius:14px;margin-bottom:10px;padding:2px 14px 2px 14px}
+.b1.mm-d{background:var(--t1)}.b2.mm-d{background:var(--t2)}.b3.mm-d{background:var(--t3)}.b4.mm-d{background:var(--t4)}.b5.mm-d{background:var(--t5)}
+.mm-m summary{cursor:pointer;font-weight:700;padding:12px 0;list-style:none}.mm-m summary::-webkit-details-marker{display:none}
+.mm-m summary::after{content:"+";float:right;color:var(--mu)}.mm-m details[open] summary::after{content:"–"}
+.mm-m ul{list-style:none;margin:0 0 12px;padding:0}.mm-m li a{display:block;padding:7px 0;color:var(--tx);font-size:15px;text-decoration:none;border-top:1px solid color-mix(in srgb,var(--tx) 10%,transparent)}
+.k1{background:var(--t1)}.k2{background:var(--t2)}.k3{background:var(--t3)}.k4{background:var(--t4)}.k5{background:var(--t5)}.k6{background:var(--t6)}
+:root{--arw:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 28'%3E%3Cpath d='M2 14h34M28 5l10 9-10 9' fill='none' stroke='black' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.ar{flex:none;display:block;width:44px;height:28px;background:var(--ac);opacity:.55;-webkit-mask:var(--arw) center/contain no-repeat;mask:var(--arw) center/contain no-repeat;align-self:center}
+/* mengapa: daftar bernomor + lingkaran */
+.nl{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+.ni{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--bd)}
+.ni i{font:500 44px/1 var(--fd);font-style:normal;color:var(--ac);opacity:.85}
+.ni h3{margin:0 0 4px;font:600 16px var(--fb)}.ni p{margin:0;color:var(--mu);font-size:15px}
+.circ{display:flex;flex-wrap:wrap;gap:16px}
+.cc{width:184px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;padding:26px;font-size:15px;line-height:1.4;color:var(--tx);font-weight:500}
+/* sosialisasi: gelembung percakapan */
+.spk{display:flex;flex-direction:column;gap:18px}
+.sp{max-width:min(600px,88%);padding:18px 24px;border-radius:28px}
+.sp:nth-child(odd){align-self:flex-start;border-bottom-left-radius:6px}
+.sp:nth-child(even){align-self:flex-end;border-bottom-right-radius:6px}
+.sp h3{margin:0 0 6px;font:600 16px var(--fb)}.sp p{margin:0;color:var(--mu);font-size:15px}
+/* alur panah */
+.flow,.rf{display:flex;align-items:stretch;gap:10px}
+.fs{flex:1;border-radius:20px;padding:18px 20px}
+.fs .no{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sf);font-weight:700;color:var(--ac);margin-bottom:8px}
+.fs h3{margin:0 0 6px;font:600 16px var(--fb)}.fs p{margin:0;color:var(--mu);font-size:15px}
+.rf .fs{flex:0 1 230px}
+.fork{position:relative;flex:1;display:flex;flex-direction:column;gap:10px;padding-left:34px;justify-content:center}
+.fork::before{content:"";position:absolute;left:10px;top:28px;bottom:28px;border-left:3px solid var(--ac);opacity:.35}
+.fk{position:relative;border-radius:16px;padding:13px 18px;color:var(--tx);font-size:15px}
+.fk::before{content:"";position:absolute;left:-24px;top:50%;width:18px;border-top:3px solid var(--ac);opacity:.35}
+.fk::after{content:"";position:absolute;left:-7px;top:50%;margin-top:-7px;border:7px solid transparent;border-left:9px solid var(--ac);border-right:0;opacity:.55}
+.fk .lv{margin-right:10px}
+/* info baris */
+.kv{border-radius:22px;background:var(--sf);border:1px solid var(--bd);padding:4px 24px}
+.kv>div{display:grid;grid-template-columns:190px 1fr;gap:14px;padding:16px 0;border-bottom:1px dashed var(--bd)}
+.kv>div:last-child{border-bottom:0}.kv b{font-weight:600}.kv span{color:var(--mu);font-size:15px}
+/* roda 7 jurus */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.wh{position:relative;width:min(100%,500px);aspect-ratio:1;margin:0 auto;container-type:inline-size}
+.wh::before{content:"";position:absolute;inset:12%;border-radius:50%;border:2px dashed color-mix(in srgb,var(--ac) 40%,transparent)}
+.wc{position:absolute;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;text-align:center;font:600 max(11px,3.8cqw)/1.2 var(--fd);background:var(--sf);box-shadow:var(--sh);padding:6px;color:var(--tx)}
+.wn{position:absolute;width:23%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:2px solid transparent;font:500 max(9px,2.5cqw)/1.15 var(--fb);color:var(--tx);display:grid;place-content:center;justify-items:center;text-align:center;padding:4px;cursor:pointer;transition:transform .2s}
+.wn b{display:block;font:700 max(12px,3.4cqw) var(--fd);color:var(--ac)}
+.wn:hover,.wn:focus-visible{transform:translate(-50%,-50%) scale(1.06)}
+.wn.on{border-color:var(--ac);box-shadow:0 0 0 5px color-mix(in srgb,var(--ac) 22%,transparent)}
+.jp{padding:20px 24px;border-radius:22px;background:var(--sf);border:1px solid var(--bd);min-height:150px}
+.jp h3{font:500 24px var(--fd);margin:0 0 8px}.jp p{margin:0;color:var(--mu)}
+/* siklus monev */
+.cyc{display:flex;align-items:flex-start;justify-content:center;gap:6px}
+.cn{flex:1;max-width:270px;text-align:center}
+.cn p{color:var(--mu);font-size:15px;margin:0}
+.cr{width:min(150px,100%);aspect-ratio:1;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font:600 18px/1.2 var(--fd);padding:12px;color:var(--tx)}
+.cyc>.ar{margin-top:60px}
+.ret{display:block;width:72%;max-width:600px;margin:8px auto 0;color:var(--ac)}.rnote{display:none;text-align:center}
+@media (max-width:860px){.wrap{grid-template-columns:1fr}.nl{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .flow,.rf{flex-direction:column}.flow>.ar,.rf>.ar{transform:rotate(90deg);width:36px;height:24px;margin:-2px auto}
+  .rf .fs{flex:1}.fork{padding-left:32px}
+  .kv>div{grid-template-columns:1fr;gap:4px}
+  .cyc{flex-direction:column;align-items:center}.cyc>.ar{margin:6px 0;transform:rotate(90deg);width:36px;height:24px}
+  .cn{max-width:340px}.ret{display:none}.rnote{display:block}
+  .sp{max-width:94%}.cc{width:calc(50% - 8px);min-width:150px;padding:18px;font-size:14px}
+}
 </style>
 </head>
 <body>
@@ -183,24 +261,28 @@ main.w section.plain{padding-left:0}
 
 <main class="w">
 <section id="latar" class="plain"><h2>Mengapa Kawan Cerita</h2><p class="sub">Alasan program ini dibangun, berdasarkan kebutuhan remaja dan kajian tentang konseling sebaya.</p>
-<div class="g">
-<div class="c"><h3>Teman sebaya terasa lebih dekat</h3><p>Remaja banyak berinteraksi dengan teman sebaya. Ikatan yang erat menumbuhkan komunikasi yang baik dan rasa aman secara emosional (Larasati &amp; Firman, 2025).</p></div>
-<div class="c"><h3>Konseling sebaya membantu</h3><p>Kajian menunjukkan peer counseling dapat menurunkan stres, meningkatkan ketahanan diri, dan memperkuat dukungan sosial pada remaja (Sa’adah &amp; Purwoko, 2026).</p></div>
-<div class="c"><h3>Menjangkau lebih luas</h3><p>Rasio ideal Guru BK adalah 1 untuk sekitar 150 murid. Konselor sebaya membantu menjangkau lebih banyak murid sebagai pertolongan pertama sebelum dirujuk ke Guru BK.</p></div>
+<div class="nl">
+<div class="ni"><i>01</i><div><h3>Teman sebaya terasa lebih dekat</h3><p>Remaja banyak berinteraksi dengan teman sebaya. Ikatan yang erat menumbuhkan komunikasi yang baik dan rasa aman secara emosional (Larasati &amp; Firman, 2025).</p></div></div>
+<div class="ni"><i>02</i><div><h3>Konseling sebaya membantu</h3><p>Kajian menunjukkan peer counseling dapat menurunkan stres, meningkatkan ketahanan diri, dan memperkuat dukungan sosial pada remaja (Sa’adah &amp; Purwoko, 2026).</p></div></div>
+<div class="ni"><i>03</i><div><h3>Menjangkau lebih luas</h3><p>Rasio ideal Guru BK adalah 1 untuk sekitar 150 murid. Konselor sebaya membantu menjangkau lebih banyak murid sebagai pertolongan pertama sebelum dirujuk ke Guru BK.</p></div></div>
+<div class="ni"><i>04</i><div><h3>7 Jurus BK Hebat</h3><p>Disusun Kemendikdasmen untuk mempermudah personalia non-BK menerapkan penanganan siswa yang sesuai dan positif. Kawan Cerita memakainya sebagai dasar pelatihan konselor sebaya.</p></div></div>
 </div>
-<p class="sub" style="margin:18px 0 0">Tujuan program: konselor sebaya terampil membantu teman, murid lain terbantu menghadapi masalahnya, dan edukasi kesejahteraan psikologis remaja tersebar luas.</p></section>
+<h3 class="h3s">Tujuan program</h3>
+<div class="circ"><div class="cc k1">Konselor sebaya terampil membantu teman</div><div class="cc k2">Murid lain terbantu menghadapi masalahnya</div><div class="cc k3">Edukasi kesejahteraan psikologis remaja tersebar luas</div></div>
+</section>
+<section id="peta" class="plain"><h2>Peta Kawan Cerita</h2><p class="sub">Gambaran besar program dan fitur website. Pilih salah satu kotak untuk menuju bagiannya.</p><div id="mm"></div></section>
 <section id="sosialisasi"><h2><span class="n">1</span>Sosialisasi</h2><p class="sub">Mengenalkan program lewat kelas dan e-flyer agar murid memahami Kawan Cerita dan tertarik bergabung.</p>
-<div class="g">
-<div class="c"><h3>Promosi di kelas</h3><p>Guru BK memperkenalkan Kawan Cerita ke kelas-kelas dan mengajak murid yang berminat menjadi Kawan Cerita.</p></div>
-<div class="c"><h3>Promosi lewat e-flyer</h3><p>Sebarkan lewat media sosial sekolah atau mading. Template Canva ini bisa diedit dan diadaptasi sekolah lain.</p><a class="btn" data-cfg="CANVA_URL" style="margin-top:14px" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#cv-ico"/></svg>Buka template Canva</a></div>
-<div class="c"><h3>Peran dan batasan</h3><p>Kawan Cerita adalah pertolongan pertama antarteman. Kasus yang berat dirujuk ke Guru BK.</p></div>
+<div class="spk">
+<div class="sp k1"><h3>Promosi di kelas</h3><p>Guru BK memperkenalkan Kawan Cerita ke kelas-kelas dan mengajak murid yang berminat menjadi Kawan Cerita.</p></div>
+<div class="sp k2"><h3>Promosi lewat e-flyer</h3><p>Sebarkan lewat media sosial sekolah atau mading. Template Canva ini bisa diedit dan diadaptasi sekolah lain.</p><a class="btn" data-cfg="CANVA_URL" style="margin-top:14px" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#cv-ico"/></svg>Buka template Canva</a></div>
+<div class="sp k3"><h3>Peran dan batasan</h3><p>Kawan Cerita adalah pertolongan pertama antarteman. Kasus yang berat dirujuk ke Guru BK.</p></div>
 </div></section>
 
 <section id="rekrutmen"><h2><span class="n">2</span>Rekrutmen</h2><p class="sub">Calon Kawan Cerita diseleksi lewat asesmen agar yang terpilih siap dan berkomitmen.</p>
-<div class="g">
-<div class="c"><h3>Pendaftaran</h3><p>Murid yang berminat mendaftar secara sukarela.</p></div>
-<div class="c"><h3>Seleksi</h3><p>Asesmen lewat Google Form mengukur motivasi dan komitmen, kematangan sosial-emosional, etika kerahasiaan, kesiapan psikologis, dan cara merespons kasus.</p></div>
-<div class="c"><h3>Penetapan</h3><p>Murid yang lolos berhak mengikuti pendidikan dan pelatihan Kawan Cerita. Pengumuman hasil seleksi disampaikan melalui website ini.</p><a class="btn" data-cfg="PENGUMUMAN_URL" style="margin-top:14px" target="_blank" rel="noopener" hidden>Unduh PDF pengumuman</a><p class="note" id="pg-n">Pengumuman akan tersedia di sini setelah seleksi selesai.</p></div>
+<div class="flow">
+<div class="fs k1"><span class="no">1</span><h3>Pendaftaran</h3><p>Murid yang berminat mendaftar secara sukarela.</p></div><i class="ar" aria-hidden="true"></i>
+<div class="fs k2"><span class="no">2</span><h3>Seleksi</h3><p>Asesmen lewat Google Form mengukur motivasi dan komitmen, kematangan sosial-emosional, etika kerahasiaan, kesiapan psikologis, dan cara merespons kasus.</p></div><i class="ar" aria-hidden="true"></i>
+<div class="fs k3"><span class="no">3</span><h3>Penetapan</h3><p>Murid yang lolos berhak mengikuti pendidikan dan pelatihan Kawan Cerita. Pengumuman hasil seleksi disampaikan melalui website ini.</p><a class="btn" data-cfg="PENGUMUMAN_URL" style="margin-top:14px" target="_blank" rel="noopener" hidden>Unduh PDF pengumuman</a><p class="note" id="pg-n">Pengumuman akan tersedia di sini setelah seleksi selesai.</p></div>
 </div>
 <h3 class="h3s">Daftar menjadi Kawan Cerita</h3>
 <div class="g"><div class="c fm" id="dfform">
@@ -214,29 +296,38 @@ main.w section.plain{padding-left:0}
 </section>
 
 <section id="pelatihan"><h2><span class="n">3</span>Pelatihan &amp; Pendidikan</h2><p class="sub">Pendidikan dan pelatihan memakai 7 Jurus BK Hebat sebagai dasar pengetahuan dan keterampilan Kawan Cerita.</p>
-<div class="g">
-<div class="c"><h3>Pelaksanaan</h3><p>Dua hari penuh, sekitar pukul 07.00 sampai 15.00.</p></div>
-<div class="c"><h3>Pembimbing</h3><p>Fasilitator 7 Jurus BK Hebat (Guru BK) dan narasumber luar, yaitu praktisi konseling dan hypnotherapy.</p></div>
-<div class="c"><h3>Metode</h3><p>Rencana Pelaksanaan Layanan (RPL) dengan experiential learning melalui ARKA: Aktivitas, Refleksi, Konseptualisasi, dan Aplikasi.</p></div>
-<div class="c"><h3>Folder RPL</h3><p id="rpl-t">Folder RPL Kawan Cerita akan segera tersedia dan dapat dipakai sekolah lain.</p><a class="btn" id="rpl-a" data-cfg="RPL_URL" style="margin-top:14px" target="_blank" rel="noopener" hidden>Buka folder RPL</a></div>
+<div class="kv">
+<div><b>Pelaksanaan</b><span>Dua hari penuh, sekitar pukul 07.00 sampai 15.00.</span></div>
+<div><b>Pembimbing</b><span>Fasilitator 7 Jurus BK Hebat (Guru BK) dan narasumber luar, yaitu praktisi konseling dan hypnotherapy.</span></div>
+<div><b>Metode</b><span>Rencana Pelaksanaan Layanan (RPL) dengan experiential learning melalui ARKA: Aktivitas, Refleksi, Konseptualisasi, dan Aplikasi.</span></div>
+<div><b>Folder RPL</b><span><span id="rpl-t">Folder RPL Kawan Cerita akan segera tersedia dan dapat dipakai sekolah lain.</span><br><a class="btn" id="rpl-a" data-cfg="RPL_URL" style="margin-top:12px" target="_blank" rel="noopener" hidden>Buka folder RPL</a></span></div>
 </div>
 <h3 class="h3s">7 Jurus BK Hebat</h3>
-<div class="g j"><div class="c"><h3>1. Kenali Potensi</h3><p>Memahami pentingnya menemukan dan mengembangkan bakat. Kawan Cerita mengukur kecerdasan interpersonal: empati, pengelolaan emosi dan konflik, menjalin relasi, dan berkesadaran.</p></div><div class="c"><h3>2. Kelola Emosi</h3><p>Mengenali, memahami, dan mengelola emosi, serta mengendalikan ekspresi emosi negatif. Juga membaca sosial-emosional teman sebaya.</p></div><div class="c"><h3>3. Tumbuhkan Resiliensi</h3><p>Menumbuhkan ketangguhan mental. Teknik umpan balik: apresiasi awal, koreksi objektif, lalu apresiasi penutup.</p></div><div class="c"><h3>4. Jaga Konsistensi</h3><p>Membiasakan karakter positif: peka dan peduli terhadap sosial-emosional lingkungan sekitar.</p></div><div class="c"><h3>5. Jalin Koneksi</h3><p>Komunikasi terapeutik: mendengarkan aktif, merespons tanpa menghakimi, dan berempati. Ini keterampilan utama Kawan Cerita.</p></div><div class="c"><h3>6. Bangun Kolaborasi</h3><p>Menganalisis kasus ringan, sedang, dan berat untuk menentukan penanganan, dan kapan berkolaborasi dengan Guru BK.</p></div><div class="c"><h3>7. Menata Situasi</h3><p>Memahami pentingnya menjaga kesejahteraan psikologis demi lingkungan sekolah yang aman, nyaman, dan menyenangkan, serta mengampanyekannya.</p></div></div></section>
+<div class="wrap"><div class="wh" id="wh"></div><div class="jp" id="jp" aria-live="polite"></div></div>
+</section>
 
 <section id="ruang"><h2><span class="n">4</span>Ruang Kawan Cerita</h2><p class="sub">Ruang gerak dan keberadaan Kawan Cerita dalam menjalankan perannya sebagai konselor sebaya.</p>
-<div class="g">
-<div class="c"><h3>Peran utama</h3><p>Membantu teman menemukan solusi atas masalahnya, mendampingi saat dibutuhkan, dan mengklasifikasi kategori masalah yang dialami.</p></div>
-<div class="c"><h3>Tingkat kebutuhan</h3><p><span class="lv ok">Ringan</span>dapat ditangani Kawan Cerita</p><p style="margin-top:6px"><span class="lv mid">Sedang</span>harus dalam pengawasan Guru BK</p><p style="margin-top:6px"><span class="lv hi">Berat</span>wajib langsung dirujuk ke Guru BK</p></div>
-<div class="c"><h3>Kolaborasi dengan Guru BK</h3><p>Semua bantuan dicatat di logbook dan dilaporkan ke Guru BK. Guru BK menjadi penghubung dan pelapor untuk masalah berat atau berbahaya, perundungan, dan kekerasan.</p></div>
-<div class="c"><h3>Edukasi dan kampanye</h3><p>Edukasi kesejahteraan psikologis lewat media sosial. World Mental Health Day menjadi hari kampanye.</p><a class="btn gh" data-cfg="IG_URL" style="margin-top:14px" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#ig-ico"/></svg>Buka Instagram</a><p class="note" data-cfg-text="IG_HANDLE" style="overflow-wrap:anywhere;font-size:12px"></p></div>
+<div class="rf">
+<div class="fs k1"><h3>Teman yang bercerita</h3><p>Murid yang membutuhkan seseorang untuk mendengarkan.</p></div><i class="ar" aria-hidden="true"></i>
+<div class="fs k2"><h3>Kawan Cerita</h3><p>Membantu menemukan solusi, mendampingi saat dibutuhkan, dan mengklasifikasi kategori masalah.</p></div><i class="ar" aria-hidden="true"></i>
+<div class="fork">
+<div class="fk k4"><span class="lv ok">Ringan</span>dapat ditangani Kawan Cerita</div>
+<div class="fk k5"><span class="lv mid">Sedang</span>harus dalam pengawasan Guru BK</div>
+<div class="fk k6"><span class="lv hi">Berat</span>wajib langsung dirujuk ke Guru BK</div>
+</div></div>
+<div class="kv" style="margin-top:22px">
+<div><b>Kolaborasi dengan Guru BK</b><span>Semua bantuan dicatat di logbook dan dilaporkan ke Guru BK. Guru BK menjadi penghubung dan pelapor untuk masalah berat atau berbahaya, perundungan, dan kekerasan.</span></div>
+<div><b>Edukasi dan kampanye</b><span>Edukasi kesejahteraan psikologis lewat media sosial. World Mental Health Day menjadi hari kampanye.<br><a class="btn gh" data-cfg="IG_URL" style="margin-top:12px" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#ig-ico"/></svg>Buka Instagram</a><span class="note" data-cfg-text="IG_HANDLE" style="display:block;overflow-wrap:anywhere;font-size:12px"></span></span></div>
 </div></section>
 
 <section id="monev"><h2><span class="n">5</span>Monitoring &amp; Evaluasi</h2><p class="sub">Monitoring dilakukan berkala lewat logbook dan perkembangan edukasi di media sosial.</p>
-<div class="g">
-<div class="c"><h3>Isi logbook</h3><p>Isi setelah selesai mendampingi teman. Jangan menulis nama atau data pribadi teman yang bercerita. Jika kasusnya Berat, segera hubungi Guru BK hari itu juga.</p><a class="btn" data-cfg="LOGBOOK_URL" style="margin-top:14px" target="_blank" rel="noopener">Buka logbook</a></div>
-<div class="c"><h3>Sharing session</h3><p>Dari logbook dan pengamatan, Guru BK melakukan evaluasi lewat sharing session satu bulan sekali.</p></div>
-<div class="c"><h3>Mini survei</h3><p>Guru BK menyebarkan mini survei ke murid lain untuk melihat sejauh mana Kawan Cerita bermanfaat.</p></div>
+<div class="cyc">
+<div class="cn"><div class="cr k1">Logbook</div><p>Isi setelah selesai mendampingi teman. Jangan menulis nama atau data pribadi teman yang bercerita. Jika kasusnya Berat, segera hubungi Guru BK hari itu juga.</p><a class="btn" data-cfg="LOGBOOK_URL" style="margin-top:14px" target="_blank" rel="noopener">Buka logbook</a></div><i class="ar" aria-hidden="true"></i>
+<div class="cn"><div class="cr k2">Sharing session</div><p>Dari logbook dan pengamatan, Guru BK melakukan evaluasi lewat sharing session satu bulan sekali.</p></div><i class="ar" aria-hidden="true"></i>
+<div class="cn"><div class="cr k3">Mini survei</div><p>Guru BK menyebarkan mini survei ke murid lain untuk melihat sejauh mana Kawan Cerita bermanfaat.</p></div>
 </div>
+<svg class="ret" viewBox="0 0 560 64" aria-hidden="true"><path d="M510 4C510 58 50 58 50 14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity=".45"/><path d="M40 24L50 10L62 22" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/><text x="280" y="52" text-anchor="middle" font-size="14" fill="currentColor" opacity=".8">berulang secara berkala</text></svg>
+<p class="note rnote">Lalu kembali ke logbook, berulang secara berkala.</p>
 <h3 class="h3s">Mini survei: isi dan lihat hasilnya</h3>
 <div class="g">
 <div class="c" id="sv-form"><h3>Seberapa bermanfaat Kawan Cerita di sekolahmu?</h3>
@@ -493,6 +584,93 @@ function result(){
   box.appendChild(mk("p","note","Jawaban dan hasil ini hanya ada di layar ini. Tidak disimpan dan tidak dikirim ke siapa pun."));
   var bt=mk("div");var b1=mk("button","btn",    "Ulangi tes"),b2=mk("button","btn gh","Hapus jawaban dan tutup");
   b1.onclick=begin;b2.onclick=reset;bt.appendChild(b1);bt.appendChild(b2);box.appendChild(bt);goTop()}
+})();
+(function(){
+var box=document.getElementById("mm");if(!box)return;
+var NS="http://www.w3.org/2000/svg";
+var J=["Kenali Potensi","Kelola Emosi","Tumbuhkan Resiliensi","Jaga Konsistensi","Jalin Koneksi","Bangun Kolaborasi","Menata Situasi"];
+var MAP=[
+{t:"5 Tahapan",c:1,s:"r",i:[["Sosialisasi","#sosialisasi"],["Rekrutmen","#rekrutmen"],["Pelatihan & Pendidikan","#pelatihan"],["Ruang Kawan Cerita","#ruang"],["Monitoring & Evaluasi","#monev"]]},
+{t:"7 Jurus BK Hebat",c:2,s:"r",i:J.map(function(x,k){return [(k+1)+". "+x,"#pelatihan"]})},
+{t:"Tingkat Kebutuhan",c:3,s:"l",i:[["Ringan: ditangani sendiri","#ruang"],["Sedang: dengan Guru BK","#ruang"],["Berat: wajib rujuk Guru BK","#ruang"]]},
+{t:"Tujuan",c:4,s:"l",i:[["Konselor sebaya terampil","#latar"],["Murid lain terbantu","#latar"],["Edukasi kesejahteraan psikologis","#latar"]]},
+{t:"Fitur Website",c:5,s:"l",i:[["Kawan Cerita Digital (KCD)","#kcd"],["Tes DASS-42","#dass"],["Logbook","#monev"],["Mini survei","#monev"],["Layanan darurat","#darurat"]]}];
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function drawSvg(){
+  box.textContent="";box.className="";
+  var ROW=38,GAP=26,LH=30,W=1120,side={r:[],l:[]};
+  MAP.forEach(function(b){side[b.s].push(b)});
+  function height(list){var h=0;list.forEach(function(b,k){h+=b.i.length*ROW+(k?GAP:0)});return h}
+  var H=Math.max(height(side.r),height(side.l))+40,cy=H/2,cx=W/2,minX=1e9,maxX=-1e9;
+  var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"group","aria-label":"Peta Kawan Cerita: lima tahapan, tujuh jurus BK hebat, tingkat kebutuhan, tujuan, dan fitur website"},box);
+  var linesG=el("g",{},svg),nodesG=el("g",{},svg);
+  ["r","l"].forEach(function(sd){
+    var list=side[sd],y=cy-height(list)/2,dir=sd==="r"?1:-1;
+    list.forEach(function(b,k){
+      if(k)y+=GAP;
+      var g=el("g",{"class":"b"+b.c},nodesG),lg=el("g",{"class":"b"+b.c},linesG);
+      var ys=b.i.map(function(_,j){return y+j*ROW+ROW/2}),by=(ys[0]+ys[ys.length-1])/2;
+      var bt=el("text",{x:0,y:0,"text-anchor":"middle"},null);bt.textContent=b.t;
+      var bg=el("g",{"class":"mmb"},g),br=el("rect",{rx:18,height:36},bg);bg.appendChild(bt);
+      var tmp=el("text",{"style":"font:700 15px var(--fb)"},svg);tmp.textContent=b.t;var bw=tmp.getBBox().width+36;svg.removeChild(tmp);
+      var bx=cx+dir*(75+bw/2+60);br.setAttribute("width",bw);br.setAttribute("x",bx-bw/2);br.setAttribute("y",by-18);
+      bt.setAttribute("x",bx);bt.setAttribute("y",by+5);
+      var x1=cx+dir*66,x2=bx-dir*bw/2,m=(x1+x2)/2;
+      el("path",{"class":"mml",d:"M"+x1+" "+cy+" C"+m+" "+cy+" "+m+" "+by+" "+x2+" "+by,"stroke-width":3},lg);
+      var edge=bx+dir*bw/2;
+      b.i.forEach(function(it,j){
+        var t=el("text",{"text-anchor":"start"},svg);t.textContent=it[0];t.setAttribute("style","font:500 14px var(--fb)");
+        var lw=t.getBBox().width+28;svg.removeChild(t);
+        var lx=dir>0?edge+34:edge-34-lw,ly=ys[j];minX=Math.min(minX,lx);maxX=Math.max(maxX,lx+lw);
+        el("path",{"class":"mml",d:"M"+edge+" "+by+" C"+(edge+dir*17)+" "+by+" "+(edge+dir*17)+" "+ly+" "+(edge+dir*34)+" "+ly,"stroke-width":1.8},lg);
+        var a=el("a",{href:it[1],"class":"mmn"},g);
+        a.appendChild(el("rect",{x:lx,y:ly-LH/2,width:lw,height:LH,rx:10}));
+        var tx=el("text",{x:lx+14,y:ly+5},a);tx.textContent=it[0];
+      });
+      y+=b.i.length*ROW;
+    });
+  });
+  svg.setAttribute("viewBox",(minX-6)+" 0 "+(maxX-minX+12)+" "+H);
+  var cg=el("g",{"class":"mmc"},nodesG);
+  var fo=el("foreignObject",{x:cx-60,y:cy-72,width:120,height:120},cg);
+  var d=document.createElement("div");d.className="logo";d.style.cssText="width:120px;height:120px;box-shadow:var(--sh)";fo.appendChild(d);
+  var ct=el("text",{x:cx,y:cy+78,"text-anchor":"middle"},cg);ct.textContent="Kawan Cerita";
+}
+function drawList(){
+  box.textContent="";box.className="mm-m";
+  var c=document.createElement("div");c.className="mm-c";var lg=document.createElement("span");lg.className="logo s";lg.setAttribute("role","img");lg.setAttribute("aria-label","Logo Kawan Cerita");c.appendChild(lg);c.appendChild(document.createTextNode("Kawan Cerita"));box.appendChild(c);
+  MAP.forEach(function(b,k){
+    var d=document.createElement("details");d.className="b"+b.c+" mm-d";if(k===0)d.open=true;
+    var s=document.createElement("summary");s.textContent=b.t;d.appendChild(s);
+    var u=document.createElement("ul");b.i.forEach(function(it){var li=document.createElement("li"),a=document.createElement("a");a.href=it[1];a.textContent=it[0];li.appendChild(a);u.appendChild(li)});
+    d.appendChild(u);box.appendChild(d)})
+}
+var mq=window.matchMedia("(max-width:860px)");
+function render(){if(mq.matches)drawList();else drawSvg()}
+render();
+if(mq.addEventListener)mq.addEventListener("change",render);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(!mq.matches)drawSvg()});
+})();
+(function(){
+var w=document.getElementById("wh"),P=document.getElementById("jp");if(!w||!P)return;
+var D=[["Kenali Potensi","Memahami pentingnya menemukan dan mengembangkan bakat. Kawan Cerita mengukur kecerdasan interpersonal: empati, pengelolaan emosi dan konflik, menjalin relasi, dan berkesadaran."],
+["Kelola Emosi","Mengenali, memahami, dan mengelola emosi, serta mengendalikan ekspresi emosi negatif. Juga membaca sosial-emosional teman sebaya."],
+["Tumbuhkan Resiliensi","Menumbuhkan ketangguhan mental. Teknik umpan balik: apresiasi awal, koreksi objektif, lalu apresiasi penutup."],
+["Jaga Konsistensi","Membiasakan karakter positif: peka dan peduli terhadap sosial-emosional lingkungan sekitar."],
+["Jalin Koneksi","Komunikasi terapeutik: mendengarkan aktif, merespons tanpa menghakimi, dan berempati. Ini keterampilan utama Kawan Cerita."],
+["Bangun Kolaborasi","Menganalisis kasus ringan, sedang, dan berat untuk menentukan penanganan, dan kapan berkolaborasi dengan Guru BK."],
+["Menata Situasi","Memahami pentingnya menjaga kesejahteraan psikologis demi lingkungan sekolah yang aman, nyaman, dan menyenangkan, serta mengampanyekannya."]];
+function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+var c=mk("div","wc","7 Jurus BK Hebat");w.appendChild(c);
+var nodes=[];
+function sel(i){nodes.forEach(function(n,k){n.classList.toggle("on",k===i);n.setAttribute("aria-pressed",k===i)});P.textContent="";P.appendChild(mk("h3",null,(i+1)+". "+D[i][0]));P.appendChild(mk("p",null,D[i][1]))}
+D.forEach(function(d,i){
+  var a=(-90+i*360/D.length)*Math.PI/180,b=mk("button","wn k"+(i%6+1));b.type="button";
+  b.style.left=(50+38*Math.cos(a))+"%";b.style.top=(50+38*Math.sin(a))+"%";
+  b.appendChild(mk("b",null,String(i+1)));b.appendChild(document.createTextNode(d[0]));
+  b.onclick=b.onfocus=function(){sel(i)};b.onmouseenter=function(){sel(i)};
+  w.appendChild(b);nodes.push(b)});
+sel(0);
 })();
 </script>
 </body>
